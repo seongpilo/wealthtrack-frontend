@@ -1,3 +1,77 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===== WealthTrack Pro Design System ===== */
+:root {
+  --wt-primary: #4F46E5;
+  --wt-primary-light: #818CF8;
+  --wt-primary-dark: #3730A3;
+  --wt-secondary: #0EA5E9;
+  --wt-success: #10B981;
+  --wt-warning: #F59E0B;
+  --wt-error: #EF4444;
+  --wt-bg: #F8FAFC;
+  --wt-surface: #FFFFFF;
+  --wt-surface-hover: #F1F5F9;
+  --wt-border: #E2E8F0;
+  --wt-border-strong: #CBD5E1;
+  --wt-text: #0F172A;
+  --wt-text-secondary: #475569;
+  --wt-text-tertiary: #94A3B8;
+  --wt-radius: 12px;
+  --wt-radius-sm: 8px;
+  --wt-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --wt-shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --wt-shadow-lg: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --wt-bg: #0F172A;
+    --wt-surface: #1E293B;
+    --wt-surface-hover: #334155;
+    --wt-border: #334155;
+    --wt-border-strong: #475569;
+    --wt-text: #F1F5F9;
+    --wt-text-secondary: #CBD5E1;
+    --wt-text-tertiary: #64748B;
+    --wt-shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --wt-shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+    --wt-shadow-lg: 0 12px 24px rgba(0,0,0,0.4);
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in   { animation: fade-in 0.4s ease both; }
+.animate-slide-in  { animation: slide-in 0.3s ease both; }
+.animate-count-up  { animation: count-up 0.5s ease both; }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--wt-border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--wt-text-tertiary); }
+
+* { -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--wt-bg);
+  color: var(--wt-text);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

@@ -1,12 +1,48 @@
-# 📈 WealthTrack (웰스트랙) - 투자 포트폴리오 성과관리 웹 서비스
+﻿# 📊 WealthTrack Pro (웰스트랙 프로)
 
-> "성과 관리만으로도 충분히 경제적 자유를 이룰 수 있다."
+> **토스증권 실시간 금융망 연동 및 모바일 하이브리드 UX 기반 고성능 자산 관리 대시보드**
 
-WealthTrack은 복잡한 투자 지표를 토스(Toss) 스타일의 미니멀하고 직관적인 UI로 정리하여, 사용자가 본인의 자산 배분 현황과 모멘텀 전략 성과를 한눈에 파악하고 매매일지를 기록할 수 있도록 돕는 웹 서비스입니다.
+본 프로젝트는 토스증권(Toss Invest)의 공식 Open API와 글로벌 외환 Open API를 다중 연동(Multi-API Architecture)하여, 소수점 단위의 오차도 허용하지 않는 실시간 주식 잔고 및 예수금, 실시간 환율 기반 자산 연산 기능을 제공하는 프로페셔널 자산 관리 플랫폼입니다.
 
-## 🚀 핵심 기능 (MVP)
-- **F-01. 간편 인증 및 회원가입**: 소셜 로그인 기반의 부드러운 진입 경험
-- **F-02. 자산 데이터 연동**: 증권사 API 연동 및 API 미지원 대응을 위한 CSV/Excel 업로드 기능
-- **F-03. 미니멀 대시보드**: 총자산 요약 및 Recharts 기반의 깔끔한 섹터/자산 배분 도넛 차트, 모멘텀 투자 신호 제공
-- **F-04. 복기 중심 매매일지**: 타임라인 형태의 실현 손익 시각화 및 한 줄 매매 사유 기록 메모 기능
-- **F-05. 목표 달성 알림**: 웹 푸시(Web Push)를 통한 자산 목표 달성 및 리밸런싱 알림
+---
+
+## ✨ 핵심 핵심 기능 (Key Features)
+
+### 1. 📊 모바일 앱 기반 하이브리드 UX/UI (Dashboard)
+- 데스크톱과 모바일 환경을 모두 저격한 **글래스모피즘 상단바 및 모바일 하이브리드 하단 앱 바(Bottom Navigation)** 시스템 탑재.
+- 노션 및 토스 감성의 **컴포넌트 카드 피드 레이아웃**으로 가독성 극대화.
+- \ramer-motion\을 활용한 미세한 인터랙션 및 부드러운 애니메이션 레이어 구현.
+
+### 2. 📝 Zero-Click 투자 복기 일지 (Journal)
+- 촌스러운 테이블(표) 구조를 완전히 탈피한 **노션/트위터 스타일의 타임라인 카드 피드**.
+- 수정 버튼 없이 입력 후 바깥을 클릭하면 실시간 초단위 타임스탬프와 함께 적층되는 **댓글형 메모 관리 시스템**.
+- 브라우저 로컬 스토리지(\LocalStorage\) 연계형 영구 저장 아키텍처.
+- 복기용 차트 캡처본을 즉시 업로드하고 바인딩할 수 있는 **이미지 렌더링 엔진** 장착.
+
+### 3. 🔄 격리된 자산 연동 제어 센터 (Sync)
+- 애플리케이션의 핵심 로직과 UI가 뒤엉키지 않도록 아키텍처 독립 분리 완료.
+- 토스증권 라이브 엔드포인트 게이트웨이 보안 키 관리 및 실시간 동기화 상태 컨트롤러 배치.
+
+---
+
+## 🛠️ 기술 스택 (Tech Stack)
+
+- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion
+- **Data Visualization:** Recharts, Lightweight SVG Engine
+- **Backend Bridge:** Next.js Route Handlers (Edge Node Fetch Platform)
+- **API Architecture:** Hybrid Multi-API Network (Toss OpenAPI OAuth 2.0 + Global Forex API)
+
+---
+
+## 🚀 시작하기 (Getting Started)
+
+\\\ash
+# 의존성 라이브러리 설치
+npm install
+
+# 로컬 개발 서버 기동
+npm run dev
+\\\
+
+---
+*WealthTrack Pro © 2026 — 스마트한 자산 관리의 시작.*
